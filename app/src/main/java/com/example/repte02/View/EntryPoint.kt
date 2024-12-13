@@ -19,7 +19,7 @@ import com.example.repte02.Routes
 @Composable
 fun EntryPoint(navigationController: NavHostController) {
     NavHost(
-        navController = navigationController,
+        navController = navigationController as NavHostController,
         startDestination = Routes.Pantalla1.route
     ) {
         composable(Routes.Pantalla1.route) { Screen1(navigationController) }

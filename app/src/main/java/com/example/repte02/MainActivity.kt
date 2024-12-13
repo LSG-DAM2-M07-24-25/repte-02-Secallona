@@ -28,8 +28,8 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val navigationController = rememberNavController()
-                    Screen1(navigationController)
-                    //EntryPoint(navigationController)
+                    //Screen1(navigationController)
+                    EntryPoint(navigationController)
 
                 }
             }

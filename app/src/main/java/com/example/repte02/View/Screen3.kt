@@ -55,12 +55,10 @@ fun Screen3(navController: NavController, muñeco: String) {
                 },
                 modifier = Modifier,
                 enabled = true,
-                readOnly = true,
+                readOnly = false,
                 textStyle = TextStyle(),
                 label = { },
                 placeholder = { Text(text = "Nom del personatge") },
-                leadingIcon = { },
-                trailingIcon = { },
                 isError = true,
                 singleLine = true,
                 maxLines = 1,
@@ -69,7 +67,7 @@ fun Screen3(navController: NavController, muñeco: String) {
 
             Spacer(modifier = Modifier.size(50.dp))
 
-            Button(onClick = {navController.navigate(Routes.Pantalla4.createRoute(nombre))}) { }
+            Button(onClick = {navController.navigate(Routes.Pantalla4.createRoute(nombre, muñeco))}) { }
         }
     }
 
