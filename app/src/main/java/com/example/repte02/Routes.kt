@@ -8,7 +8,7 @@ sealed class Routes(val route: String) {
         fun createRoute(muñeco: String) = "pantalla3/$muñeco"
     }
 
-    object Pantalla4 : Routes("pantalla4/{nombre}") {
-        fun createRoute(nombre: String) = "pantalla4/$nombre"
+    object Pantalla4 : Routes("pantalla4/{nombre}/{muñeco}") {
+        fun createRoute(nombre: String, muñeco: String) = "pantalla4/$nombre/$muñeco"
     }
 }

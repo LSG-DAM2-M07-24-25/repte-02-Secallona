@@ -24,11 +24,7 @@ fun EntryPoint(navigationController: NavHostController) {
     ) {
         composable(Routes.Pantalla1.route) { Screen1(navigationController) }
 
-        composable(Routes.Pantalla2.route,
-            arguments = listOf(
-                navArgument("muñeco"){ type = NavType.StringType}
-            )
-        ) { Screen2(navigationController) }
+        composable(Routes.Pantalla2.route){ Screen2(navigationController) }
 
 
 

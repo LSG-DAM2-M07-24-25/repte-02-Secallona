@@ -29,6 +29,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val navigationController = rememberNavController()
                     Screen1(navigationController)
+                    //EntryPoint(navigationController)
 
                 }
             }
