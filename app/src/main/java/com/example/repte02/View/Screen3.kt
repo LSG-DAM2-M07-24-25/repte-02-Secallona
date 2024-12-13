@@ -2,10 +2,15 @@ package com.example.repte02.View
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -21,6 +26,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.repte02.R
+import com.example.repte02.Routes
 
 
 @SuppressLint("UnrememberedMutableInteractionSource")
@@ -29,9 +35,14 @@ import com.example.repte02.R
 fun Screen3(navController: NavController, muñeco: String) {
     var nombre by remember { mutableStateOf("") }
 
-    Box(){
+    Box(modifier = Modifier.fillMaxSize()){
 
-        Column(modifier = Modifier.align(Alignment.Center)) {
+        Column(modifier = Modifier
+            .fillMaxWidth()
+            .fillMaxHeight(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             Image(painterResource(id = R.drawable.dragonball_daima_logo),
                 contentDescription = "logo")
 
@@ -58,7 +69,7 @@ fun Screen3(navController: NavController, muñeco: String) {
 
             Spacer(modifier = Modifier.size(50.dp))
 
-            //Button(onClick = {navController.navigate(Routes.Routes.Pantalla4.createRoute(nombre))}) { }
+            Button(onClick = {navController.navigate(Routes.Pantalla4.createRoute(nombre))}) { }
         }
     }
 

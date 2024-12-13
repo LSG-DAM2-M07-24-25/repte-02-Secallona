@@ -1,6 +1,7 @@
 package com.example.repte02.View
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -34,7 +35,10 @@ fun Screen2(navController: NavController){
     ){
         Column( modifier = Modifier
             .fillMaxWidth()
-            .fillMaxHeight() ) {
+            .fillMaxHeight(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             Image(
                 painter = painterResource(id = R.drawable.dragonball_daima_logo),
                 contentDescription = "logo"
@@ -87,7 +91,7 @@ fun Screen2(navController: NavController){
             }
 
             Button(
-                onClick = {navController.navigate(Routes.Routes.Pantalla3.createRoute(muñecoSeleccionado))},
+                onClick = {navController.navigate(Routes.Pantalla3.createRoute(muñecoSeleccionado))},
                 enabled = muñecoSeleccionado.isNotEmpty(),
                 ) { Text("Continuar") }
         }
