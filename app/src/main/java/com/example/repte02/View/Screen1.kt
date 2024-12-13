@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.repte02.R
 import com.example.repte02.Routes
-import java.lang.reflect.Modifier
+import androidx.compose.ui.Modifier
 
 @Composable
 fun Screen1(navController: NavController) {
@@ -26,7 +26,7 @@ fun Screen1(navController: NavController) {
     ){
         Box(
             modifier = Modifier
-                .align(Alignment.Center)
+                //.align(Alignment.Center)
         ){
             Column{
                 Image(
