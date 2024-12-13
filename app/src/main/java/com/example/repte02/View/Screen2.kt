@@ -1,5 +1,6 @@
 package com.example.repte02.View
 
+import android.widget.Space
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -89,7 +90,7 @@ fun Screen2(navController: NavController){
                     )
                 }
             }
-
+            Spacer(modifier = Modifier.size(40.dp))
             Button(
                 onClick = {navController.navigate(Routes.Pantalla3.createRoute(muñecoSeleccionado))},
                 enabled = muñecoSeleccionado.isNotEmpty(),

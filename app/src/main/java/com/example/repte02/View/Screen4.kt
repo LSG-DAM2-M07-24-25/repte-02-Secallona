@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -18,6 +19,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.repte02.R
+import com.example.repte02.Routes
 
 
 @Composable
@@ -52,8 +54,12 @@ fun Screen4(navController: NavController, muñeco: String, nombre: String) {
                     .width(250.dp)
                     .height(250.dp)
             )
-            Text(nombre, modifier = Modifier.size(50.dp))
+            Text(nombre, modifier = Modifier.size(100.dp))
+            Button(onClick = {navController.navigate(Routes.Pantalla2.route)}) {
+                Text("Tornar")
+            }
         }
+
     }
 
 }

@@ -67,7 +67,9 @@ fun Screen3(navController: NavController, muñeco: String) {
 
             Spacer(modifier = Modifier.size(50.dp))
 
-            Button(onClick = {navController.navigate(Routes.Pantalla4.createRoute(nombre, muñeco))}) { }
+            Button(onClick = {navController.navigate(Routes.Pantalla4.createRoute(nombre, muñeco))}) {
+                Text("Mostrar")
+            }
         }
     }
 
